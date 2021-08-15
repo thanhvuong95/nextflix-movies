@@ -1,0 +1,27 @@
+.favorite {
+    min-height: 100vh;
+    color: var(--second-txt-color);
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.favorite__heading {
+    padding: 32px;
+    text-transform: uppercase;
+}
+.favorite__item {
+    position: relative;
+    cursor: pointer;
+
+}
+.favorite__img {
+    padding-top: 50%;
+    border-radius: 4px;
+
+}
+.favorite__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}

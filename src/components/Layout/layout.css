@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #111;
+}
+:root {
+    --main-bg-color: #000;
+    --second-bg-color:#fff;
+
+    --main-txt-color:#000;
+    --second-txt-color:#fff;
+
+    --height-nav:70px;
+
+    --red-dark-color:#BD1616;
+    --red-bright-color:#FF2626;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main {
+  margin-top: var(--height-nav);
+  padding:0 8px ;
+    
+}
+#loading-spinner {
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    z-index: 999999;
+  }
+  
+.spin-icon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+  
+    border: solid 3px transparent;
+    border-top-color:  var(--red-bright-color);
+    border-left-color: var(--red-bright-color);
+    border-radius: 80px;
+    animation:loading-spinner 500ms linear infinite;
+  }
+  .spin-icon.spin-icon--sm {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+
+  }
+  @keyframes loading-spinner {
+    0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+    100% { transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  .loading {
+    height: 100%;
+    display: flex;
+  }
+ 

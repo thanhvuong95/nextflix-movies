@@ -1,0 +1,22 @@
+.footer {
+    color:var(--second-txt-color);
+    font-size: 1.5rem;
+    padding: 24px 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.footer h4 {
+    padding: 12px 0;
+}
+.footer ul li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+@media screen and (max-width:600px) {
+    .footer {
+        text-align: center;
+    }
+    .footer ul {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    
+}

@@ -1,0 +1,16 @@
+.toast-custom {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    height: 100%;
+}
+.toast-custom span {
+    flex: 1;
+    margin-left: 24px;
+    
+}
+.toast-custom i {
+    font-size: 2rem;
+   
+}

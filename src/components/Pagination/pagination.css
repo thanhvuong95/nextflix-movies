@@ -1,0 +1,16 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 32px;
+}
+.pagination i {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px;
+    margin: 0 4px;
+}
+.pagination i:hover  {
+    color:var(--red-dark-color)
+}

@@ -1,0 +1,199 @@
+.movie-item {
+    font-size: 1.5rem;
+    color: var(--second-txt-color);
+    min-height: 100vh;
+    position: relative;
+}
+.movie-item .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.movie-item__bg {
+    padding-top: 50%;
+    position: relative;
+}
+
+.movie-item__wrap {
+    position: relative;
+    margin-top: -30%;
+    padding: 32px 24px;
+    display: flex;
+}
+.movie-item__img  {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.movie-item__img img{
+   height: 400px;
+   width: 100%;
+   max-width: 300px;
+   object-fit: cover;
+
+}
+.movie-item__button{
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.movie-item__btn{
+    cursor: pointer;
+    display: flex;
+    padding: 12px 24px;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    color: var(--main-txt-color);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    margin-right: 32px;
+
+}
+.movie-item__contents {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 32px;
+}
+.movie-item__btn i {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+.movie-item__btn:hover {
+    background-color: var(--red-bright-color);
+    color: var(--second-txt-color);
+}
+.movie-item__title{
+    font-size: 3rem;
+}
+.movie-item__descriptions {
+    display:-webkit-box;
+    -webkit-line-clamp:6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+.movie-item__rating {
+    margin-left: 8px;
+}
+.movie-item__genre {
+    padding: 4px 8px;
+    border-radius: 2px;
+    margin-right: 6px;
+    position: relative;
+}
+.movie-item__genre+.movie-item__genre::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 70%;
+    width: 2px;
+    background-color: var(--second-bg-color);
+    top: 50%;
+    transform: translateY(-50%);
+    left: -3px;
+}
+.movie-item__genres {
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+.movie-item__rating__wrap  {
+    padding-top: 12px;
+}
+.movie-item__production {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.movie-item__cast {
+    margin-bottom: 32px;
+    text-align: center;
+}
+.movie-item__cast-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.movie-item__cast-img img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s linear;
+}
+.movie-item__cast-title {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 24px;
+
+}
+.movie-item__cast-title span{
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+}
+.movie-item__cast-title span::before, .movie-item__cast-title span::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: var(--second-bg-color);
+    top:50%;
+    transform: translateY(-50%);
+}
+.movie-item__cast-title span::before {
+    left: 100%;
+
+}
+.movie-item__cast-title span::after {
+    right: 100%;
+
+}
+@media screen and (max-width:768px) {
+    .movie-item__wrap {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .movie-item__contents {
+       padding: 0;
+    }
+    .movie-item__title, .movie-item__genres {
+        text-align: center;
+    }
+    .movie-item__button {
+        justify-content: center;
+    }
+    .movie-item__cast-title span::before, .movie-item__cast-title span::after {
+        width: 50px;
+    }
+    .movie-item__cast-img {
+       height: 150px; 
+    }
+    
+    
+}
+@media screen and (max-width:480px) {
+    .movie-item__button {
+        flex-direction: column;
+        width: 45%;
+    }
+    .movie-item__btn {
+        margin-top: 12px;
+    }
+    .movie-item__bg {
+        padding-top: 100%;
+    }
+    .movie-item__wrap {
+        margin-top: -70%;
+    }
+    
+}
