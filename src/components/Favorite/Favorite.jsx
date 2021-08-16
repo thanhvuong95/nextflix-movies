@@ -24,7 +24,7 @@ const Favorite = () => {
                 :
                 list.length
                 ?
-                <Grid>
+                <div className = "favorite__container">
                     {
                         list.map(item => (
                             <Link to = {`/${item.category}/${item.id}`} className = "favorite__item">
@@ -44,7 +44,7 @@ const Favorite = () => {
                             </Link>
                         ))
                     }
-                </Grid>
+                </div>
                 :
                 <span>You have not added any movies to this list.</span>
 

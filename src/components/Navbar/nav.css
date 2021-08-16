@@ -89,7 +89,7 @@
 }
 
 #nav-menu:checked ~ .nav__list {
-    transform: translateX(0);
+    transform: translateY(0);
 }
 .nav-hamburger {
     display: inline-block;
@@ -99,10 +99,14 @@
     position: relative;
     transition: .3s ease;
 }
+
 .nav-toggle {
     display: none;
+    cursor: pointer;
+    padding: 12px 0;
     
 }
+
 .nav-hamburger::before,
 .nav-hamburger::after {
     content: '';
@@ -159,11 +163,12 @@
         top: var(--height-nav);
         bottom: 0;
         left: 0;
-        width: 50%;
+        right: 0;
         background-color: var(--main-bg-color);
-        transform: translateX(-100%);
+        transform: translateY(calc(-100% - var(--height-nav)));
         transition: .3s ease-in;
         z-index: 9;
+        text-align: center;
     }  
     .nav__icon i {
         font-size: 3rem;
@@ -178,12 +183,13 @@
         align-items: center;
     }
     .nav__search {
-        position: absolute;
+        position: fixed;
         top: var(--height-nav);
         left: 0;
         right: 0;
         border-radius: unset;
         display: none;
+        z-index: 999;
     }
     .nav__search.show {
         display: flex;

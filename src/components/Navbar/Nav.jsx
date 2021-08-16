@@ -59,13 +59,18 @@ const Nav = () => {
     const onMyList = () => {
         history.push('/mylist')
     }
+    const changeRoute = (path) => {
+        history.push(`${path}`)
+    }
     return (
         <div className = {`nav ${isShow && 'nav__shadow'}` }>
             <div className="container nav__container">
+
                 <input type="checkbox" id= "nav-menu" hidden />
                 <label htmlFor="nav-menu" className = "nav-toggle">
                     <span className = "nav-hamburger"></span>
                 </label>
+
                 <Link to = '/'>
                      <img src= {logo} alt="logo" className="nav__logo" />    
                 </Link>
@@ -73,10 +78,17 @@ const Nav = () => {
                      {
                          nav_Links.map((item, index) => (
                             <li key = {index} className={`nav__item ${pathname === item.path ? 'active' : ''}`}>
-                                <Link to = {item.path}>{item.display}</Link>
+                                {/* <Link to = {item.path} >
+                                    <label htmlFor="nav-menu"></label>
+                                        {item.display}  
+                                </Link> */}
+                                <label htmlFor="nav-menu" onClick = {() => changeRoute(item.path)}>
+                                    {item.display}  
+                                </label>
                             </li>
                          ))
                      }
+
                 </ul>
                
                 {/* <div className={`nav__search ${isSearch ? 'show' : ''}`}>
